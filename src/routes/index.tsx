@@ -29,7 +29,7 @@ function pickRandom(exclude?: number): ConnectionCard {
   const pool = exclude
     ? connectionCards.filter((c) => c.number !== exclude)
     : connectionCards;
-  return pool[Math.floor(Math.random() * pool.length)];
+  return pool[Math.floor(Math.random() * pool.length)]!;
 }
 
 function Index() {
