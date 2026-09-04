@@ -154,3 +154,25 @@
 
   }
 }
+
+@utility grain-overlay {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(oklch(0.2 0.04 50 / 0.25) 1px, transparent 1px);
+    background-size: 4px 4px;
+    opacity: 0.35;
+  }
+}
+
+@utility rope-divider {
+  height: 2px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--color-gold) 0 10px,
+    transparent 10px 18px
+  );
+}
